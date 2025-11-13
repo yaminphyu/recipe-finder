@@ -123,8 +123,8 @@ export default function Navbar() {
   const handleSidebar = () => setIsOpen(!isOpen);
 
   return (
-    <header className="w-full h-20 border-2 border-gray-200 shadow-md flex justify-center items-center px-4 py-2">
-      <div className="w-[92vw] flex justify-between items-center">
+    <header className="w-full h-20 border-2 border-gray-200 shadow-md flex justify-center items-center px-6 py-2 fixed bg-[#ededed] z-50">
+      <div className="w-full lg:w-[80vw] flex justify-between items-center">
         <Logo />
         <Menu />
         <div className='relative'>
