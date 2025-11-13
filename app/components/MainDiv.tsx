@@ -8,7 +8,7 @@ export default function MainDiv({
   customClass?: string
 }>) {
   return (
-    <div className={`flex flex-col items-start lg:items-center justify-center w-full lg:w-[80vw] xl:w-[65vw] h-full gap-4 px-4 lg:px-0 ${customClass}`}>
+    <div className={`bg-[#ededed] flex flex-col items-start lg:items-center justify-center w-full lg:w-[80vw] xl:w-[65vw] h-full gap-4 px-4 lg:px-0 ${customClass}`}>
       {children}
     </div>
   )
