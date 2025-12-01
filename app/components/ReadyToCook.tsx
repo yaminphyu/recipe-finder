@@ -3,8 +3,11 @@
 import React from 'react'
 import MainDiv from './MainDiv'
 import Button from './Button'
+import { useRouter } from 'next/router';
 
 export default function ReadyToCook() {
+  const router = useRouter();
+
   return (
     <MainDiv customClass='mt-12 lg:mt-22'>
       <div className='w-full p-4 flex flex-col justify-center items-center rounded-lg bg-[#e5f4e3]'>
@@ -14,6 +17,7 @@ export default function ReadyToCook() {
           ariaLabel="Browse Recipes"
           label="Browse Recipes"
           customClass='!w-42 text-center !mt-2 lg:!mb-10'
+          onClick={() => router.push('/recipes')}
         />
       </div>
     </MainDiv>
