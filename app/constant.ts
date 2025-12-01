@@ -81,7 +81,7 @@ export const RECIPES = [
     id: 4,
     title: "Quinoa Veggie Power Bowl",
     description:
-      "A balanced bowl of fluffy quinoa, roasted veggies and healthy fats.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus lobortis, scelerisque felis eu, congue neque. Morbi tristique lacus convallis nibh efficitur porttitor eget ac metus. Suspendisse imperdiet pharetra lectus vel feugiat. Etiam condimentum molestie faucibus. Maecenas a est eu orci rutrum suscipit. Ut a luctus risus. Etiam aliquam sem ac efficitur semper. Quisque placerat erat ligula, a feugiat sem rutrum id. Ut at tortor sed nunc lacinia efficitur id ut elit. Proin eu lacus quis ante rutrum tincidunt et quis libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus lobortis, scelerisque felis eu, congue neque. Morbi tristique lacus convallis nibh efficitur porttitor eget ac metus. Suspendisse imperdiet pharetra lectus vel feugiat. Etiam condimentum molestie faucibus. Maecenas a est eu orci rutrum suscipit. Ut a luctus risus. Etiam aliquam sem ac efficitur semper. Quisque placerat erat ligula, a feugiat sem rutrum id. Ut at tortor sed nunc lacinia efficitur id ut elit. Proin eu lacus quis ante rutrum tincidunt et quis libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
     servings: 2,
     prep: "10 mins",
     cook: "15 mins",
@@ -181,7 +181,7 @@ export const RECIPES = [
     id: 14,
     title: "Quinoa Veggie Power Bowl",
     description:
-      "A balanced bowl of fluffy quinoa, roasted veggies and healthy fats.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus lobortis, scelerisque felis eu, congue neque. Morbi tristique lacus convallis nibh efficitur porttitor eget ac metus. Suspendisse imperdiet pharetra lectus vel feugiat. Etiam condimentum molestie faucibus. Maecenas a est eu orci rutrum suscipit. Ut a luctus risus. Etiam aliquam sem ac efficitur semper. Quisque placerat erat ligula, a feugiat sem rutrum id. Ut at tortor sed nunc lacinia efficitur id ut elit. Proin eu lacus quis ante rutrum tincidunt et quis libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus lobortis, scelerisque felis eu, congue neque. Morbi tristique lacus convallis nibh efficitur porttitor eget ac metus. Suspendisse imperdiet pharetra lectus vel feugiat. Etiam condimentum molestie faucibus. Maecenas a est eu orci rutrum suscipit. Ut a luctus risus. Etiam aliquam sem ac efficitur semper. Quisque placerat erat ligula, a feugiat sem rutrum id. Ut at tortor sed nunc lacinia efficitur id ut elit. Proin eu lacus quis ante rutrum tincidunt et quis libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
     servings: 2,
     prep: "10 mins",
     cook: "15 mins",

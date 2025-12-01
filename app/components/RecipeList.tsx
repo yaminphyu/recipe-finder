@@ -4,11 +4,48 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBowlFood, faClock, faUser } from '@fortawesome/free-solid-svg-icons'
 import { getPageNumbers } from '../useHook/Common';
 
+const RenderList = ({
+  latestRecord
+}: {
+  latestRecord: any;
+}) => {
+  return latestRecord?.map((recipe: any, index: number) => (
+    <div
+      key={index}
+      className='mb-4 p-3 bg-white rounded-xl w-full h-auto flex flex-col gap-3 cursor-pointer hover:shadow-lg transition-shadow'
+      onClick={() => window.open(`/recipes/${recipe.id}`, '_blank')}
+    >
+      <Image
+        src={recipe.image}
+        alt={recipe.title}
+        width={300}
+        height={150}
+        className='w-full h-40 object-cover rounded-lg'
+      />
+      <h3 className='text-xl font-semibold overflow-hidden whitespace-nowrap text-ellipsis text-green-900'>{recipe.title}</h3>
+      <p className='text-green-900 overflow-hidden whitespace-nowrap text-ellipsis'>{recipe.description}</p>
+      <div className='flex justify-start items-center gap-4'>
+        <p className='text-green-900'>
+          <FontAwesomeIcon icon={faUser} className='mr-1' />
+          Servings: {recipe.servings}
+        </p>
+        <p className='text-green-900'>
+        <FontAwesomeIcon icon={faClock} className='mr-1' />
+        Prep: {recipe.prep}
+      </p>
+      </div>
+      <p className='text-green-900'>
+        <FontAwesomeIcon icon={faBowlFood} className='mr-1' />
+        Cook: {recipe.cook}
+      </p>
+    </div>
+  ))
+};
 
 const Pagination = ({
   currentPage,
   setCurrentPage,
-  totalPages
+  totalPages,
 }: {
   currentPage: number;
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
@@ -63,40 +100,17 @@ export default function RecipeList({
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
   totalPages: number;
 }) {
+  if (!latestRecord || latestRecord.length === 0) {
+    return (
+      <div className='w-full h-auto flex justify-center items-center mt-3'>
+        <p className='text-base lg:text-lg'>No recipes found.</p>
+      </div>
+    );
+  }
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 rounded-xl my-2">
-      {
-        latestRecord?.map((recipe: any, index: number) => (
-          <div
-            key={index}
-            className='mb-4 p-3 bg-white rounded-xl w-full h-auto flex flex-col gap-3'
-          >
-            <Image
-              src={recipe.image}
-              alt={recipe.title}
-              width={300}
-              height={150}
-              className='w-full h-40 object-cover rounded-lg'
-            />
-            <h3 className='text-xl font-semibold overflow-hidden whitespace-nowrap text-ellipsis text-green-900'>{recipe.title}</h3>
-            <p className='text-green-900'>{recipe.description}</p>
-            <div className='flex justify-start items-center gap-4'>
-              <p className='text-green-900'>
-                <FontAwesomeIcon icon={faUser} className='mr-1' />
-                Servings: {recipe.servings}
-              </p>
-              <p className='text-green-900'>
-              <FontAwesomeIcon icon={faClock} className='mr-1' />
-              Prep: {recipe.prep}
-            </p>
-            </div>
-            <p className='text-green-900'>
-              <FontAwesomeIcon icon={faBowlFood} className='mr-1' />
-              Cook: {recipe.cook}
-            </p>
-          </div>
-        ))
-      }
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 rounded-xl mt-3 mb-2 w-full">
+      <RenderList latestRecord={latestRecord} />
       <Pagination
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
