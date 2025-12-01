@@ -1,9 +1,9 @@
-'use clinet'
+'use client';
 
 import React from 'react'
 import MainDiv from './MainDiv'
 import Button from './Button'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function ReadyToCook() {
   const router = useRouter();
