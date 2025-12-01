@@ -71,7 +71,7 @@ const SearchBar = ({
       <input
         type="text"
         placeholder="Search by name or ingredients..."
-        className="w-full pl-10 pr-3 py-2 border-2 text-gray-500 border-gray-700 rounded-xl focus:outline-none focus:border-green-500"
+        className="w-full pl-10 pr-3 py-2 border-2 text-gray-500 border-gray-300 rounded-xl focus:outline-none focus:border-green-500"
         onChange={(e) => handleOnChange(e)}
         onKeyDown={(e) => {
           if (e.key === 'Enter') handleKeyDown(e);
