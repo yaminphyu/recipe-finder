@@ -119,6 +119,7 @@ const Sidebar = ({
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const router = useRouter();
 
   const handleSidebar = () => setIsOpen(!isOpen);
 
@@ -132,6 +133,7 @@ export default function Navbar() {
             ariaLabel="Browse Recipes"
             label="Browse Recipes"
             customClass="hidden md:flex"
+            onClick={() => router.push('/recipes')}
           />
           <Button
             ariaLabel="Toggle menu"

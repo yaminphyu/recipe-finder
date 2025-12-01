@@ -2,16 +2,24 @@ import React from 'react'
 import MainDiv from './MainDiv'
 import Button from './Button'
 
-export default function Vendor() {
+export default function Vendor({
+  title,
+  subTitle,
+  miniSubTitle
+}: {
+  title: string,
+  subTitle: string,
+  miniSubTitle?: string,
+}) {
   return (
     <MainDiv customClass='mb-4 md:mb-12 xl:mb-14 mt-24 lg:mt-32'>
-      <h1 className="text-5xl md:text-6xl font-bold text-green-950">Healthy meals, zero fuss</h1>
-      <div className="hidden xl:flex text-green-800 font-medium flex-col items-center text-lg">
-        Discover eight quick, whole food recipes that you can cook tonight
-        <span>__no processed junk, no guesswork.</span>
+      <h1 className="text-4xl md:text-5xl font-bold text-green-950">{title}</h1>
+      <div className="hidden xl:flex text-green-800 font-medium flex-col items-center text-lg lg:text-center">
+        {subTitle}
+        <span>{miniSubTitle}</span>
       </div>
       <div className="flex xl:hidden text-green-800 font-medium flex-col items-center text-base md:text-xl">
-        Discover eight quick, whole food recipes that you can cook tonight __no processed junk, no guesswork.
+        {subTitle} {miniSubTitle}
       </div>
       <Button
         ariaLabel="Start Exploring"
